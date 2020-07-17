@@ -1,0 +1,43 @@
+import java.util.;
+class Solution{
+	
+    public static boolean isBalanced(String input, HashMapCharacter, Character map) {
+        if ((input.length() % 2) != 0) {
+            return false;
+        }        
+        ArrayDequeCharacter deque = new ArrayDeque();
+        for (int i = 0; i  input.length(); i++) 
+        {
+            Character ch = input.charAt(i);
+            if (map.containsKey(ch)) 
+            {
+                deque.push(ch);
+            } 
+            else if (deque.isEmpty()  ch != map.get(deque.pop())) 
+            {
+                return false;
+            }
+        }
+        return deque.isEmpty();
+    }
+
+	public static void main(String []argh)
+	{
+        HashMapCharacter, Character map = new HashMap();
+        map.put('(', ')');
+        map.put('[', ']');
+        map.put('{', '}');
+
+		Scanner sc = new Scanner(System.in);
+		
+		while (sc.hasNext()) {
+			String input=sc.next();
+            Complete the code
+            System.out.println(isBalanced(input, map)  true  false );
+		}
+		sc.close();
+	}
+}
+
+
+
