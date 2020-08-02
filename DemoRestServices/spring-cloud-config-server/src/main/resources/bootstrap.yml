@@ -5,5 +5,5 @@ spring:
         config:
             server:
                 git:
-                    uri: https://github.com/satyamthedeveloper/Submissions_841418_SatyamKumar
+                    uri: https://github.com/aakash03chaudhari/Submissions_841176_AakashChaudhari
                     clone-on-start: true
